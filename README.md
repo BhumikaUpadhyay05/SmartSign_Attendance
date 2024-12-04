@@ -73,7 +73,7 @@ Once a signature is detected, it is compared against a pre-registered list of au
 - Labelimg (for labelling the images)
 - YOLO (You Only Look Once) pre-trained model
 
-![Processed Output Image](Desktop/1.jpg)
+
 
 
 
