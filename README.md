@@ -73,7 +73,15 @@ Once a signature is detected, it is compared against a pre-registered list of au
 - Labelimg (for labelling the images)
 - YOLO (You Only Look Once) pre-trained model
 
+![Smart Sign](1.jpg)
 
+![Smart Sign](2.jpg)
+
+![Smart Sign](3.jpg)
+
+![Smart Sign](4.jpg)
+
+![Smart Sign](5.jpg)
 
 
 
