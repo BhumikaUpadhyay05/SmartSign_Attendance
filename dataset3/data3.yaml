@@ -1,0 +1,15 @@
+train: /Users/bhumika/Documents/Bhumika_Upadhyay_CV_assignment/CV_project/dataset3/train3 # Path to training images
+val: /Users/bhumika/Documents/Bhumika_Upadhyay_CV_assignment/CV_project/dataset3/val3 # Path to validation images
+
+nc: 10 # Number of classes
+names:
+  0: Aarav Patel
+  1: Anjali Gupta
+  2: Ayesha Khan
+  3: Dev Joshi
+  4: Dhruv Mehta
+  5: Kartik Agarwal
+  6: Meera Pillai
+  7: Soham Singh
+  8: Shruti Patel
+  9: Tanya Sharma

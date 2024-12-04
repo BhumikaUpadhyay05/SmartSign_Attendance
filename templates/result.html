@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attendance Detection Results</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f8ff;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      }
+      .container {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        max-width: 1200px;
+      }
+      .left-column {
+        width: 45%;
+        text-align: center;
+      }
+      .right-column {
+        width: 45%;
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border: 2px solid #ccc;
+      }
+      h1 {
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      table {
+        width: 100%;
+        margin: 20px 0;
+        border-collapse: collapse;
+        table-layout: fixed;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #ddd;
+        background-color: #ffffff;
+      }
+      th {
+        background-color: #58d2fa;
+      }
+      .present {
+        font-weight: bold;
+        color: green;
+      }
+      .absent {
+        font-weight: bold;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Left Column: Image and Title -->
+      <div class="left-column">
+        <h1>Attendance Detection Results</h1>
+        <img
+          src="data:image/jpeg;base64,{{ image_data }}"
+          alt="Detected Image"
+        />
+      </div>
+
+      <!-- Right Column: Attendance Table -->
+      <div class="right-column">
+        <h2>Attendance</h2>
+        <table>
+          <tr>
+            <th>Student Name</th>
+            <th>Attendance</th>
+          </tr>
+          {% for student in student_attendance %}
+          <tr>
+            <td>{{ student.name }}</td>
+            <td
+              class="{{ 'present' if student.attendance == 'Present' else 'absent' }}"
+            >
+              {{ student.attendance }}
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
